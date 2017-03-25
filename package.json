@@ -1,12 +1,20 @@
 {
   "name": "mbtiles2ungzpbf",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Very simple project to convert an mbtiles file into a set of ungzipped pbf tiles for local serving.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
     "mbtiles2ungzpbf": "bin/index.js"
+  },
+  "homepage": "https://github.com/phiphou/mbtiles2ungzpbf#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phiphou/mbtiles2ungzpbf"
+  },
+  "bugs": {
+    "url": "https://github.com/phiphou/mbtiles2ungzpbf/issues"
   },
   "dependencies": {
     "sqlite3": "^3.1.8",
