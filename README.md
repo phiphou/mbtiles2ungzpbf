@@ -1,4 +1,4 @@
-[![GitHub version](https://badge.fury.io/gh/phiphou%2Fmbtiles2ungzpbf.svg)](https://badge.fury.io/gh/phiphou%2Fmbtiles2ungzpbf)
+[![npm version](https://badge.fury.io/js/mbtiles2ungzpbf.svg)](https://badge.fury.io/js/mbtiles2ungzpbf)
 [![Dependency Status](https://david-dm.org/phiphou/mbtiles2ungzpbf.svg)](https://david-dm.org/phiphou/mbtiles2ungzpbf)
 [![MIT license](https://img.shields.io/badge/Licence-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 [![Size](https://reposs.herokuapp.com/?path=phiphou/mbtiles2ungzpbf)](#)
