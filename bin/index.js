@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-
-"use strict"
-
+"use strict";
 const Buffer = require('buffer').Buffer
 const zlib = require('zlib')
 const fs = require('fs')
