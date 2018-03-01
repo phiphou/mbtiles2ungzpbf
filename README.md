@@ -23,6 +23,13 @@ $ npm i mbtiles2ungzpbf -g
 ```
 $ mbtiles2ungzpbf -f tiles.mbtiles
 ```
+
+You can also specify the output directory with the `dir` option (named `tiles` by default).
+
+```
+$ mbtiles2ungzpbf -f tiles.mbtiles -d mytiles
+```
+
 Try
 
 ```

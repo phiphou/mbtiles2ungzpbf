@@ -9,11 +9,17 @@ const writeFile = require('writefile')
 let argv = require('yargs')
   .usage('Usage: <command> [options]')
   .command('mbtiles2ungzpbf', 'Convert an mbtiles file into a set of ungzipped pbf tiles.')
-  .example('mbtiles2ungzpbf -f tiles.mbtiles', 'the mbtiles file.')
+  .example('mbtiles2ungzpbf -f tiles.mbtiles')
   .option('file', {
     alias: 'f',
     demandOption: true,
     describe: 'The mbtiles file.',
+    type: 'string'
+  })
+  .option('dir', {
+    alias: 'd',
+    demandOption: false,
+    describe: 'The tiles directory.',
     type: 'string'
   })
   .check(check_args)
@@ -30,6 +36,7 @@ function check_args(args, options) {
 }
 
 let db = new sqlite3.Database(argv.file, function (err) {});
+let dir = argv.dir || 'tiles'
 
 db.each("SELECT * FROM tiles", function (err, row) {
   if (err) {
@@ -37,6 +44,6 @@ db.each("SELECT * FROM tiles", function (err, row) {
   } else {
     let raw = zlib.gunzipSync(new Buffer(row.tile_data))
     let y = (1 << row.zoom_level) - row.tile_row - 1
-    writeFile(`tiles/${row.zoom_level}/${row.tile_column}/${y}.pbf`, raw)
+    writeFile(`${dir}/${row.zoom_level}/${row.tile_column}/${y}.pbf`, raw)
   }
 })
