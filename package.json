@@ -17,7 +17,7 @@
     "url": "https://github.com/phiphou/mbtiles2ungzpbf/issues"
   },
   "dependencies": {
-    "sqlite3": "^3.1.8",
+    "sqlite3": "^4.0.0",
     "writefile": "^0.2.8",
     "yargs": "^11.0.0"
   },
